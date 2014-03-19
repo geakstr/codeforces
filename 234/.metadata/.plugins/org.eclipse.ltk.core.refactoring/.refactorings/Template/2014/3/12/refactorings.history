@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;t&apos; in &apos;Main.solve()&apos; to &apos;ans&apos;&#x0A;- Original project: &apos;Template&apos;&#x0A;- Original element: &apos;Main.solve().t&apos;&#x0A;- Renamed element: &apos;t&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;t&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Main.java[Main~solve@t!931!970!944!944!QSet\&lt;QSegment;&gt;;!0!false" name="ans" references="true" stamp="1395216121321" version="1.0"/>
+</session>

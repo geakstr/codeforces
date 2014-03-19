@@ -1,0 +1,87 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	BufferedReader in;
+	PrintWriter out;
+	StringTokenizer st;
+	
+	class Segment implements Comparable<Segment> {
+		int from, to, len;
+		
+		Segment(int from, int to) {
+			this.from = from;
+			this.to = to;
+			this.len = to - from;
+		}
+
+		@Override
+		public int compareTo(Segment o) {
+			return len - o.len;
+		}		
+	}
+	
+	void solve() throws IOException {
+		int n = ni(), m = ni();
+		int[][] a = new int[n][m];
+		
+		
+		TreeSet<Segment> t = new TreeSet<Segment>();
+		for (int i = 0; i < n; i++) {
+			char[] c = in.readLine().toCharArray();
+			
+			int jg = 0, js = 0;
+			for (int j = 0; j < m; j++) {
+				if (c[j] == 'G') {
+					a[i][j] = 1;
+					jg = j;
+				} else if (c[j] == 'S') {
+					a[i][j] = 2;
+					js = j;
+				}
+			}
+			if (jg > js) {
+				out.println("-1");
+				return;
+			}
+			
+		}
+		
+		Set<Integer> fin = new HashSet<Integer>();
+		for (int i = 0; i < n; i++) {
+			
+		}
+	}
+	
+	Main() throws IOException {
+		in = new BufferedReader(new InputStreamReader(System.in));
+		out = new PrintWriter(new OutputStreamWriter(System.out));
+		solve();
+		in.close();
+		out.close();
+	}
+	
+	String ns() throws IOException {
+		while (st == null || !st.hasMoreTokens()) {
+			st = new StringTokenizer(in.readLine());
+		}
+		return st.nextToken();
+	}
+	
+	int ni() throws IOException {
+		return Integer.valueOf(ns());
+	}
+	
+	double nd() throws IOException {
+		return Double.valueOf(ns());
+	}
+	
+	long nl() throws IOException {
+		return Long.valueOf(ns());
+	}
+	
+	public static void main(String[] args) throws IOException {
+		new Main();
+	}
+	
+}
